@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <!--Sidebar content-->
+      <div class="centerwrap">
+        <input placeholder="Global Search" ng-model="global">
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+        <hr>
+      </div>
+    </div>
+
+  
+    
+    <div class="span3">
+      <!--Body content-->
+      <input placeholder="Search Phones" ng-model="phone" class="centerwrap"> 
+      <ul class="phones">
+        
+        <li ng-repeat="phone in phones | filter:global | filter:phone | orderBy:orderProp" class="thumbnail" >
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+  
+    </div>
+
+    <div class="span3">
+      <input placeholder="Search Donor" ng-model="donor" class="centerwrap">
+      <ul class="donors">
+
+        <li ng-repeat="donor in donors | filter:global | filter:donor | orderBy:orderProp" class="thumbnail">
+            <h4>{{donor.name}}</h4>
+            <p>{{donor.tel}}, <br>
+              {{donor.email}}, <br>
+            {{donor.company}}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="span3">
+      <input placeholder="Search Company" ng-model="company" class="centerwrap">
+      <ul class="companies">
+
+        <li ng-repeat="company in companies | filter:global | filter:company | orderBy:orderCompany" class="thumbnail">
+            <h4>{{company.company}}</h4>
+            <address>{{company.street}}, <br>
+              {{company.country}}, <br>
+            {{company.city}}</address>
+            <p>{{company.description}}</p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

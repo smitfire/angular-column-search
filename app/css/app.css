@@ -1,0 +1,105 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.phones {
+  list-style: none;
+}
+div{
+  margin-top: 10px;
+}
+
+.thumb {
+  float: left;
+  margin: -1em 1em 1.5em 0em;
+  padding-bottom: 1em;
+  height: 50px;
+  width: 50px;
+}
+
+.centerwrap{
+  display: table;
+  margin: 0 auto;
+}
+
+.super-class {
+   font-weight: bold;
+    color: red;
+}
+ul.donors,
+ul.companies,
+ul.phones{
+  display: inline-block;
+}
+
+donors li p {
+  margin: 3px;
+}
+
+ul.companies li,
+ul.donors li,
+.phones li {
+  list-style: none;
+  clear: both;
+  padding-top: 15px;
+  margin: 10px 0;
+  height: auto;
+}
+
+/** Detail View **/
+img.phone {
+  float: left;
+  border: 1px solid black;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 2em;
+  height: 400px;
+  width: 400px;
+}
+
+ul.phone-thumbs {
+  margin: 0;
+  list-style: none;
+}
+
+ul.phone-thumbs li {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 1em;
+  background-color: white;
+}
+
+ul.phone-thumbs img {
+  height: 100px;
+  width: 100px;
+  padding: 1em;
+}
+
+ul.specs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.specs > li{
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+ul.specs > li > span{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ul.specs dt {
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
